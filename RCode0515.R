@@ -1,11 +1,21 @@
-install.packages('dplyr') #
-library('dplyr')
-library('ggthemes')
-library('mice')
-library('randomForest')
+install.packages('dplyr') # install package
+install.packages('ggthemes')
+install.packages('mice')
+install.packages('randomForest')
+# ===================
+library('readr')
+library('ggplot2') # visualization
+library('ggthemes') # visualization
+library('scales') # visualization
+library('dplyr') # data manipulation
+library('mice') # impucation
+library('randomForest') # classification algorithm
 
-train <- read_csv("~/Desktop/Titanic/Data/train.csv")
+-----------
+train <- read_csv("~/Desktop/Titanic/Data/train.csv") #import data
 test <- read_csv("~/Desktop/Titanic/Data/test.csv")
-full <- bind_rows(train,test)
+full <- bind_rows(train,test) # combine dataset
 
-str(full)
+
+str(full) # display structure of data
+
